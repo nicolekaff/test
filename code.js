@@ -30,6 +30,8 @@ function loadImages() {
     document.querySelector("#imgB").innerHTML = codeB;
 }
 
+// Fetch JSON
+// Source: https://stackoverflow.com/questions/2499567/how-to-make-a-json-call-to-an-url/2499647#2499647
 function Get(yourUrl){
     var Httpreq = new XMLHttpRequest(); // a new request
     Httpreq.open("GET",yourUrl,false);
@@ -46,7 +48,12 @@ function loadMetadata() {
         
         var json_A = JSON.parse(Get(urlA));
         var json_B = JSON.parse(Get(urlB));
-        console.log("title: "+json_A.title + " artist: "+json_A.artist);
-        console.log("title: "+json_B.title + " artist: "+json_B.artist);
+        
+        let capA = "title: " + json_A.title + " artist: " + json_A.artist;
+        let capB = "title: " + json_B.title + " artist: " + json_B.artist;
+        
+        // Update HTML
+        document.querySelector("#capA").innerHTML = capA;
+        document.querySelector("#capB").innerHTML = capB;
     }
 }
