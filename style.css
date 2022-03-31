@@ -10,6 +10,10 @@ input {
     margin: 1rem 1rem 1rem 1rem;
 }
 
+#capA {
+    padding-left: 7rem;
+}
+
 #capB {
-    padding-left: 30rem;
+    padding-left: 14rem;
 }
