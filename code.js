@@ -3,7 +3,7 @@
 window.onload = main;
 
 function main() {
-    document.querySelector("#imgButton").onclick = loadImage;
+    document.querySelector("#imgButton").onclick = loadImages;
     document.querySelector("#metaButton").onclick = loadMetadata;
 }
 
