@@ -15,7 +15,9 @@ function loadImages() {
     }
     
     let codeA = '<img src="https://raw.githubusercontent.com/nicolekaff/test/main/data/imgs/00' + String(randA) + '.jpeg">';
+    console.log(codeA);
     let codeB = '<img src="https://raw.githubusercontent.com/nicolekaff/test/main/data/imgs/00' + String(randB) + '.jpeg">';
+    console.log(codeB);
     
     document.querySelector("#imgA").innerHTML = codeA;
     document.querySelector("#imgB").innerHTML = codeB;
