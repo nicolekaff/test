@@ -28,6 +28,8 @@ function loadImages() {
     // Update HTML
     document.querySelector("#imgA").innerHTML = codeA;
     document.querySelector("#imgB").innerHTML = codeB;
+    document.querySelector("#capA").innerHTML = "";
+    document.querySelector("#capB").innerHTML = "";
 }
 
 // Fetch JSON
