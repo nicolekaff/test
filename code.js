@@ -30,34 +30,23 @@ function loadImages() {
     document.querySelector("#imgB").innerHTML = codeB;
 }
 
-// loadJSON method to open the JSON file.
-// Source: https://www.educative.io/edpresso/how-to-read-a-json-file-from-a-url-in-javascript
-function loadJSON(path, success, error) {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        success(JSON.parse(xhr.responseText));
-      }
-      else {
-        error(xhr);
-      }
-    }
-  };
-  xhr.open('GET', path, true);
-  xhr.send();
+function Get(yourUrl){
+    var Httpreq = new XMLHttpRequest(); // a new request
+    Httpreq.open("GET",yourUrl,false);
+    Httpreq.send(null);
+    return Httpreq.responseText;          
 }
 
-function processJSON(Data) {
-    console.log(Data[0]);
-}
 
 function loadMetadata() {
     if (typeof imgA !== 'undefined' && typeof imgB !== 'undefined') {
+        
         let urlA = "https://raw.githubusercontent.com/nicolekaff/test/main/data/meta/" + imgA + ".json";
         let urlB = "https://raw.githubusercontent.com/nicolekaff/test/main/data/meta/" + imgB + ".json";
         
-        loadJSON(urlA, processJSON,'jsonp');
-        loadJSON(urlB, processJSON,'jsonp'); 
+        var json_A = JSON.parse(Get(urlA));
+        var json_B = JSON.parse(Get(urlB));
+        console.log("title: "+json_A.title + " artist: "+json_A.artist);
+        console.log("title: "+json_B.title + " artist: "+json_B.artist);
     }
 }
