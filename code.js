@@ -8,7 +8,7 @@ function main() {
 }
 
 function loadImage() {
-    document.querySelector("#imgDiv").innerHTML = '<img src="/data/imgs/001.jpeg">';
+    document.querySelector("#imgDiv").innerHTML = '<img src="data/imgs/001.jpeg" alt="alt text">';
 }
 
 function loadMetadata() {
