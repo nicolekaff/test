@@ -28,8 +28,8 @@ function loadImages() {
     // Update HTML
     document.querySelector("#imgA").innerHTML = codeA;
     document.querySelector("#imgB").innerHTML = codeB;
-    document.querySelector("#capA").innerHTML = "";
-    document.querySelector("#capB").innerHTML = "";
+    document.querySelector("#capA").innerHTML = " ";
+    document.querySelector("#capB").innerHTML = " ";
 }
 
 // Fetch JSON
@@ -51,8 +51,8 @@ function loadMetadata() {
         var json_A = JSON.parse(Get(urlA));
         var json_B = JSON.parse(Get(urlB));
         
-        let capA = "title: " + json_A.title + " artist: " + json_A.artist;
-        let capB = "title: " + json_B.title + " artist: " + json_B.artist;
+        let capA = "Title: " + json_A.title + " Artist: " + json_A.artist;
+        let capB = "Title: " + json_B.title + " Artist: " + json_B.artist;
         
         // Update HTML
         document.querySelector("#capA").innerHTML = capA;
